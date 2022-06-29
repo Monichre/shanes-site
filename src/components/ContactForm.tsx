@@ -1,11 +1,12 @@
-import cogoToast from "cogo-toast";
-import TextField from "./TextField";
-import emailjs from '@emailjs/browser';
-import {ImSpinner9} from "react-icons/im";
-import {MdArrowRightAlt} from "react-icons/md";
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react"
 
-const ContactForm = ({className}) => {
+import { ImSpinner9 } from "react-icons/im"
+import { MdArrowRightAlt } from "react-icons/md"
+import TextField from "./TextField"
+import cogoToast from "cogo-toast"
+import emailjs from '@emailjs/browser'
+
+const ContactForm = ({className=null}) => {
     const [noForVerify, setNoForVerify] = useState(0);
     const [isSubmitting, setSubmitting] = useState(false);
     const [humanTestCode, setHumanTestCode] = useState(null);

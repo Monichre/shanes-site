@@ -13,7 +13,7 @@ const Portfolios = ({ audioSamples }) => {
 
         <div className="grid gap-7 sm:grid-cols-2 md:grid-cols-3">
           {audioSamples.map((sample) => (
-            <FeaturedAudio {...sample} />
+            <FeaturedAudio key={sample.title} {...sample} />
           ))}
         </div>
       </div>

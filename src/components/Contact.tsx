@@ -7,7 +7,7 @@ const Contact = ({ contactInfo }) => {
   return (
     <section className="py-[100px]" id="contact">
       <div className="container">
-        <SectionTitle title="Get In Touch" />
+        <SectionTitle title="Get In Touch"  />
 
         <div className="grid grid-cols-1 md:grid-cols-12">
           <div className="col-span-5">
