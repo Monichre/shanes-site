@@ -53,22 +53,23 @@ const FeaturedVideo = ({ title, photo, video }: VideoItem) => {
 
 const FeaturedAudio = ({ audio, photo: { url }, title }: MusicItem) => {
   return (
-    <div
-      className={`relative overflow-hidden rounded-md duration-400 hover:drop-shadow-portfolio ${
-        audio ? bgOverlay : ''
-      }`}
-    >
-      <h2 className="mb-3 text-base font-semibold">{title}</h2>
-      <Image src={url} alt={title} />
-
-      {audio && (
-        <ReactAudioPlayer
-          style={{ margin: 'auto', width: '100%' }}
-          src={audio.url}
-          controls
-        />
-      )}
-    </div>
+    <>
+      <div
+        className={`relative overflow-hidden rounded-md duration-400 hover:drop-shadow-portfolio ${
+          !audio ? bgOverlay : ''
+        }`}
+      >
+        <h2 className="mb-3 text-base font-semibold">{title}</h2>
+        <Image src={url} alt={title} />
+        {audio && (
+          <ReactAudioPlayer
+            style={{ margin: '24px auto 0', width: '100%' }}
+            src={audio.url}
+            controls
+          />
+        )}
+      </div>
+    </>
   )
 }
 
