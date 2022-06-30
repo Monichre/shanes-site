@@ -12,7 +12,6 @@ const ModalVideo: any = dynamic(() => import('react-modal-video'), {
 })
 
 const FeaturedVideo = ({ title, photo, video }: VideoItem) => {
-  console.log('photo: ', photo)
   const [isOpen, setOpen] = useState(false)
   let channel, videoId
 

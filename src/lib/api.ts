@@ -13,14 +13,11 @@ async function fetchGraphQL(query, preview = false) {
       },
       body: JSON.stringify({ query }),
     }
-  ).then((response) => {
-    console.log('response: ', response)
-    return response.json()
-  })
+  ).then((response) => response.json())
 }
 
 export async function getQuery(query) {
   const entries = await fetchGraphQL(query)
-  console.log('entries: ', entries)
+
   return entries
 }

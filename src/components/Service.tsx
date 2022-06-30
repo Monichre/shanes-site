@@ -36,8 +36,8 @@ const Service: React.FunctionComponent<ServiceProps> = ({
 }
 
 const serviceBefore =
-  'before:absolute before:left-5 before:top-9 before:h-[calc(100%-60px)] before:w-[1px] before:bg-gray-300'
+  'before:absolute before:left-[21px] before:top-9 before:h-[calc(100%-60px)] before:w-[1px] before:bg-gray-300'
 const serviceAfter =
-  'after:absolute after:left-4 after:bottom-4 after:h-[10px] after:w-[10px] after:rounded-full after:bg-gray-300'
+  'after:absolute after:left-[17px] after:bottom-4 after:h-[10px] after:w-[10px] after:rounded-full after:bg-gray-300'
 
 export default Service

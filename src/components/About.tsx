@@ -59,7 +59,7 @@ const ClassDescription = ({
   return (
     <section
       className="pt-[80px] pb-[60px] lg:pt-[100px] lg:pb-[125px]"
-      id="about"
+      id="services"
     >
       <div className="container">
         <SectionTitle title={name} className="lg:hidden" />

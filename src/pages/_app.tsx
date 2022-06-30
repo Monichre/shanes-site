@@ -1,16 +1,18 @@
 import '../styles/globals.css'
 
-import Head from "next/head"
+import Head from 'next/head'
+import ReactGA from 'react-ga'
 
-const Rokstar = ({Component, pageProps}) => {
-    return (
-        <>
-            <Head>
-                <title>Shane Ellis :: Musician | Drummer</title>
-            </Head>
-            <Component {...pageProps} />
-        </>
-    )
+const App = ({ Component, pageProps }) => {
+  ReactGA.initialize('G-YYZ9XMRYWV')
+  return (
+    <>
+      <Head>
+        <title>Shane Ellis :: Musician | Drummer</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
-export default Rokstar
+export default App

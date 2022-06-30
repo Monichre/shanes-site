@@ -2,26 +2,26 @@
   {
     "id": 1,
     "name": "Home",
-    "href": "hero"
+    "href": "#hero"
   },
   {
     "id": 2,
     "name": "About",
-    "href": "about"
+    "href": "#about"
   },
   {
     "id": 3,
     "name": "Classes",
-    "href": "classes"
+    "href": "#services"
   },
   {
     "id": 4,
     "name": "Portfolio",
-    "href": "portfolio"
+    "href": "#portfolio"
   },
   {
     "id": 5,
     "name": "Contact",
-    "href": "contact"
+    "href": "#contact"
   }
 ]

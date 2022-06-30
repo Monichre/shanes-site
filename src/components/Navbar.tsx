@@ -1,5 +1,6 @@
-import { Link } from 'react-scroll'
-import { checkExternalLink } from '../utils/checkExternalLink'
+// import { Link } from 'react-scroll'
+
+import Link from 'next/link'
 import navbar from '../data/navbar.json'
 
 const Navbar = ({ className = null }) => {
@@ -7,29 +8,21 @@ const Navbar = ({ className = null }) => {
     <nav className={`navbar hidden sm:block ${className ?? ''}`}>
       <ul className="nav flex space-x-10">
         {navbar.map((item) => (
-          <li key={item.id}>
-            {checkExternalLink(item.href) ? (
-              <a
-                href={item.href}
-                target="_blank"
-                data-hover={item.name.toLowerCase()}
-                className={`block text-white font-medium text-sm relative cursor-pointer after:duration-300 ${navItemHoverStyle}`}
-                rel="noreferrer"
-              >
-                <span className="block duration-300">{item.name}</span>
-              </a>
-            ) : (
-              <Link
-                spy={true}
-                smooth={true}
-                to={item.href}
-                activeClass={navItemActiveStyle}
-                data-hover={item.name.toLowerCase()}
-                className={`block text-white font-medium text-sm relative cursor-pointer after:duration-300 ${navItemHoverStyle}`}
-              >
-                <span className="block duration-300">{item.name}</span>
-              </Link>
-            )}
+          <li
+            key={item.name}
+            className={`relative block cursor-pointer text-sm font-medium text-white after:duration-300 ${navItemHoverStyle}`}
+          >
+            <Link
+              passHref
+              scroll
+              // smooth={true}
+              href={`/${item.href}`}
+              // activeClass={navItemActiveStyle}
+              data-hover={item.name.toLowerCase()}
+              className={`relative block cursor-pointer text-sm font-medium text-white after:duration-300 ${navItemHoverStyle}`}
+            >
+              <span className="block duration-300">{item.name}</span>
+            </Link>
           </li>
         ))}
       </ul>

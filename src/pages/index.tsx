@@ -14,6 +14,7 @@ import Header from '../components/Header'
 import HeroArea from '../components/HeroArea'
 import Portfolios from '../components/Portfolios'
 import Preloader from '../components/Preloader'
+import ReactGA from 'react-ga'
 import { getQuery } from '../lib/api'
 
 const Home = ({
@@ -27,6 +28,8 @@ const Home = ({
   const [preloaded, setPreloaded] = useState(false)
 
   useEffect(() => {
+    ReactGA.pageview(window.location.origin)
+
     setTimeout(() => {
       setPreloaded(true)
     }, 800)
